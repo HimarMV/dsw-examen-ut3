@@ -7,6 +7,12 @@
     <title>Productos</title>
 </head>
 <body>
+    @if(session('status'))
+        <div>
+            {{ session('status') }}
+        </div>
+    @endif
+
     @if($errors->any())
         <div class="errores">
             <ul>

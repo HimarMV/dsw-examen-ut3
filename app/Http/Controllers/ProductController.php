@@ -48,11 +48,11 @@ class ProductController extends Controller
            
         ]);
 
-        $linea = '"' . $nombreProducto . '";"' . $descripcionProducto . '";"' . $categoriaProducto . '";"' . $precio . ";" . $unidades . "\"\n";
+        $linea = '"' . $nombreProducto . '";"' . $descripcionProducto . '";"' . $precio . ";" . $unidades . '";"'. $categoriaProducto . "\"\n";
 
         file_put_contents(storage_path('app/productos.csv'), $linea, FILE_APPEND);
 
-       return redirect()->route('product.create')->with('status', 'Producto guardado correctamente. Número de unidades registradas:' , $unidades);
+       return redirect()->route('product.create')->with('status', "Producto guardado correctamente. Número de unidades registradas: $unidades");
     }
 
 }
