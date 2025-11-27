@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Bienvenido a la Gestión de Productos</h1>
-    <img src="" alt="foto">
+    <img src="img/foto.png" alt="foto">
     <p>Esta aplicación permite gestionar el inventario de nuestra tienda de forma eficiente y rápida.</p>
     <p><a href="{{ route('product.create') }}">Ir al formulario</a></p>
 </body>
